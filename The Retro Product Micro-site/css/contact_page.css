@@ -1,0 +1,469 @@
+/* default css start */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+  .container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  .header-area {
+    background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.5)),
+    url(https://wallpaperaccess.com/full/5686369.jpg);
+    background-position: center center;
+    background-size: cover;
+  }
+  /* default css end */
+  
+  
+  /* navbar regular css start */
+  .navbar-area {
+    background: rgba(0,0,0,.6);
+    border-bottom: 1px solid #000;
+  }
+  .site-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  a.site-logo {
+    font-size: 26px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    font-family: Harrington ;
+  }
+  .site-navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+  }
+  .site-navbar ul li a {
+    color: #fff;
+    padding: 20px;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  .site-navbar ul li a:hover {
+    background: rgba(255,255,255,.1);
+  }
+  /* navbar regular css end */
+  
+  
+  /* nav-toggler css start */
+  .nav-toggler {
+    border: 3px solid #fff;
+    padding: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    height: 39px;
+    display: none;
+  }
+  .nav-toggler span, 
+  .nav-toggler span:before, 
+  .nav-toggler span:after {
+    width: 28px;
+    height: 3px;
+    background-color: #fff;
+    display: block;
+    transition: .3s;
+  }
+  .nav-toggler span:before {
+    content: '';
+    transform: translateY(-9px);
+  }
+  .nav-toggler span:after {
+    content: '';
+    transform: translateY(6px);
+  }
+  .nav-toggler.toggler-open span {
+    background-color: transparent;
+  }
+  .nav-toggler.toggler-open span:before {
+    transform: translateY(0px) rotate(45deg);
+  }
+  .nav-toggler.toggler-open span:after {
+    transform: translateY(-3px) rotate(-45deg);
+  }
+  /* nav-toggler css start */
+  
+  
+  /* intro-area css start */
+  .intro-area {
+    height: calc(100vh - 61px);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+  }
+  .intro-area h2 {
+    font-size: 50px;
+    font-weight: 300;
+    line-height: 50px;
+    margin-bottom: 25px;
+  }
+  .intro-area p {
+    font-size: 18px;
+  }
+  /* intro-area css end */
+  
+  
+  /* mobile breakpoint start */
+  @media screen and (max-width: 767px) {
+    .container {
+      max-width: 720px;
+    }
+    /* navbar css for mobile start */
+    .nav-toggler{
+      display: block;
+    }
+    .site-navbar {
+      min-height: 60px;
+    }
+    .site-navbar ul {
+      position: absolute;
+      width: 100%;
+      height: calc(100vh - 60px);
+      left: 0;
+      top: 60px;
+      flex-direction: column;
+      align-items: center;
+      border-top: 1px solid #444;
+      background-color: rgba(0,0,0,.75);
+      max-height: 0;
+      overflow: hidden;
+      transition: .3s;
+    }
+    .site-navbar ul li {
+      width: 100%;
+      text-align: center;
+    }
+    .site-navbar ul li a {
+      padding: 25px;
+    }
+    .site-navbar ul li a:hover {
+      background-color: rgba(255,255,255,.1);
+    }
+    .site-navbar ul.open {
+      max-height: 100vh;
+      overflow: visible;
+    }
+    .intro-area h2 {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }  
+    /* navbar css for mobile end */
+  }
+  /* mobile breakpoint end */
+
+  
+
+  .card-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    container-type: inline-size;
+    resize: horizontal;
+    overflow: auto;
+  }
+  
+  .card-list__item {
+    width: 100%;
+  }
+  
+  @container (min-width: 600px) {
+    .card-list__item {
+      width: calc((100% - 16px) / 2);
+    }
+  }
+  
+  .card {
+    border: 2px solid gray;
+    border-radius: 16px;
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card__title {
+    font-size: 18px;
+    text-align: center;
+  }
+  
+  .card__content {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    flex-grow: 1;
+  }
+  
+  .card__image-wrapper {
+    width: 35%;
+    flex-shrink: 0;  
+  }
+  .card__image {
+    overflow: hidden;
+    border-radius: 16px;
+  }
+  
+  .card__text {
+    font-family: serif;
+  }
+  
+  .card__button-wrapper {
+    margin-top: 1rem;
+    text-align: center;
+  }
+  
+  .card__button {
+    appearance: none;
+    border: none;
+    background-color: #4B7CB6;
+    color: white;
+    padding: 1rem;
+    min-width: 50%;
+    border-radius: 100vh;
+    cursor: pointer;
+  }
+  
+  .section {
+    margin: 32px;
+  }
+  
+  * {
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
+  }
+  
+
+
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+  
+  .containerr {
+      max-width: 1200px;
+      width: 90%;
+      margin: 0 auto;
+  }
+  :root {
+      /* //....... Color ........// */
+      --primary-color: #ff3c78;
+      --light-black: rgba(0, 0, 0, 0.89);
+      --black: #000;
+      --white: #fff;
+      --grey: #aaa;
+  }
+  
+  .contact {
+      margin-top: 45px;
+  }
+  
+  .form {
+      display: flex;
+      justify-content: space-between;
+      margin: 80px 0;
+  }
+  
+  .form .form-txt {
+      flex-basis: 66%;
+  }
+  
+  .form .form-txt h1 {
+      font-weight: 600;
+      color: var(--black);
+      font-size: 40px;
+      letter-spacing: 1.5px;
+      margin-bottom: 10px;
+      color: var(--light-black);
+  }
+  
+  .form .form-txt span {
+      color: var(--light-black);
+      font-size: 14px;
+  }
+  
+  .form .form-txt h3 {
+      font-size: 22px;
+      font-weight: 600;
+      margin: 15px 0;
+      color: var(--light-black);
+  }
+  
+  .form .form-txt p {
+      color: var(--light-black);
+      font-size: 14px;
+  }
+  
+  .form .form-details {
+      flex-basis: 48%;
+  }
+  
+  .form .form-details input[type="text"],
+  .form .form-details input[type="email"] {
+      padding: 15px 20px;
+      color: var(--black);
+      outline: none;
+      border: 1px solid var(--grey);
+      margin: 35px 15px;
+      font-size: 14px;
+  }
+  
+  .form .form-details textarea {
+      padding: 15px 20px;
+      margin: 0 15px;
+      color: var(--black);
+      outline: none;
+      border: 1px solid var(--grey);
+      font-size: 14px;
+      resize: none;
+  }
+  
+  .form .form-details button {
+      padding: 15px 25px;
+      color: var(--white);
+      font-weight: 500;
+      background: var(--black);
+      outline: none;
+      border: none;
+      margin: 15px;
+      font-size: 14px;
+      letter-spacing: 2px;
+      cursor: pointer;
+  }
+  
+  @media (max-width: 500px) {
+      .form {
+          display: flex;
+          flex-direction: column;
+      }
+      .form .form-details button {
+          margin-left: 0;
+      }
+      .form .form-details input[type="text"],
+      .form .form-details input[type="email"],
+      .form .form-details textarea {
+          width: 100%;
+          margin-left: 0;
+      }
+      .form .form-details input[type="text"] {
+          margin-bottom: 0px;
+      }
+  }
+  
+  @media(min-width: 501px) and (max-width: 768px) {
+      .form {
+          display: flex;
+          flex-direction: column;
+      }
+      .form .form-details button {
+          margin-left: 0;
+      }
+      .form .form-details input[type="text"],
+      .form .form-details input[type="email"],
+      .form .form-details textarea {
+          width: 100%;
+          margin-left: 0;
+      }
+      .form .form-details input[type="text"] {
+          margin-bottom: 0px;
+      }
+  }
+
+  body {
+    font-family: 'Varela Round', sans-serif;
+  }
+  .modal-confirm {		
+    color: #636363;
+    width: 325px;
+    font-size: 14px;
+  }
+  .modal-confirm .modal-content {
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+  }
+  .modal-confirm .modal-header {
+    border-bottom: none;   
+    position: relative;
+  }
+  .modal-confirm h4 {
+    text-align: center;
+    font-size: 26px;
+    margin: 30px 0 -15px;
+  }
+  .modal-confirm .form-control, .modal-confirm .btn {
+    min-height: 40px;
+    border-radius: 3px; 
+  }
+  .modal-confirm .close {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+  }	
+  .modal-confirm .modal-footer {
+    border: none;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 13px;
+  }	
+  .modal-confirm .icon-box {
+    color: #fff;		
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: -70px;
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    z-index: 9;
+    background: #82ce34;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+  }
+  .modal-confirm .icon-box i {
+    font-size: 58px;
+    position: relative;
+    top: 3px;
+  }
+  .modal-confirm.modal-dialog {
+    margin-top: 80px;
+  }
+  .modal-confirm .btn {
+    color: #fff;
+    border-radius: 4px;
+    background: #82ce34;
+    text-decoration: none;
+    transition: all 0.4s;
+    line-height: normal;
+    border: none;
+  }
+  .modal-confirm .btn:hover, .modal-confirm .btn:focus {
+    background: #6fb32b;
+    outline: none;
+  }
+  .trigger-btn {
+    display: inline-block;
+    margin: 100px auto;
+  }
+
+  
